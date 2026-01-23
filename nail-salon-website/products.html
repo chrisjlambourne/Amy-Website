@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,62 +16,171 @@
         <div class="logo">
             <a href="index.html"><img src="images/logo.jpeg" alt="Amy Lambourne Logo" class="logo-img"></a>
         </div>
-        <a href="#" class="toggle-button"><span class="bar"></span><span class="bar"></span><span class="bar"></span></a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
         <div class="navbar-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="salon.html">The Salon</a></li>
-                <li><a href="services.html">Service Menu</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Booking & Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="page-header">
-        <h1>Our Products</h1>
-        <p>Only the best for your nails</p>
+        <h1>Our Premium Partners</h1>
+        <p>Quality ingredients for healthy, beautiful nails</p>
     </header>
 
-    <section class="container">
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-info">
-                    <h3>CND LUXE</h3>
-                    <p>LUXE is a 'light' version of the original Shellac. It has both a protective base and colour coat in one, allowing for rapid one-minute removal time! Highly recommended for pedicures.</p>
-                </div>
-            </div>
+    <section class="container text-center">
+        <p style="max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem;">
+            We believe that beautiful nails start with healthy nails. That’s why we have carefully selected the industry’s most respected brands to ensure every treatment provides longevity, shine, and care.
+        </p>
 
-            <div class="product-card">
-                <div class="product-info">
-                    <h3>Solar Oil</h3>
-                    <p>An award-winning product infused with Jojoba oil, Sweet Almond Oil, and Vitamin E. Repeated use drives nutrients deeper, creating stronger nails and hydrated cuticles. Recommended for daily use.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-info">
-                    <h3>Lecenté Nail Art</h3>
-                    <p>A market leader in nail art supplies, offering 'cosmetic approved' glitters, foils, and powders. We use these to create ombrés, chrome finishes, and intricate patterns.</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-info">
-                    <h3>Creative Play</h3>
-                    <p>Highly pigmented colour with a bright shine. Great for use in nail art designs and nail stamping.</p>
+        <div class="product-category">
+            <h2>Strengthening & Repair</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-ibx.jpg" alt="IBX System">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>IBX System</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>The IBX System is a revolutionary treatment for weak, peeling, or damaged nails. Unlike traditional hardeners that just sit on top of the nail, IBX uses heat and light to penetrate the nail plate and fuse the upper layers together. It strengthens your natural nail from the inside out, acting as a protective shield under Gel Polish or as a powerful standalone treatment to encourage growth.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="product-category">
+            <h2>Gel & Colour Systems</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-shellac.jpg" alt="CND Shellac">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>CND™ Shellac™</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>Known globally as "The Original Power Polish," CND Shellac combines the ease of polish with the permanence of gel. It offers 14+ days of high-performance wear, stunning crystal shine, and zero dry time. Best of all, it requires no roughing of the natural nail, keeping your nails healthy and strong.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-artistic.jpg" alt="Artistic Colour Gloss">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>Artistic Colour Gloss</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>For those who love vibrant, edgy, and distinct shades, we use Artistic Colour Gloss. This soak-off gel formula is designed to last up to 21 days without peeling or chipping. It glides on beautifully and cures in seconds, leaving you with a high-gloss finish that stays flawless until your next appointment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-luxe.jpg" alt="CND Luxe">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>CND™ Luxe</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>The premium upgrade. CND Luxe is designed for clients who want the very best in speed and care. Offering the same high-gloss shine you love, this luxury formula is designed for faster application and, crucially, gentle removal in as little as 60 seconds—saving you time while pampering your nails.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <h2>Specialized Foot Care</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-footlogix.jpg" alt="Footlogix">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>Footlogix®</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>We trust Footlogix for truly transformational results. As the world’s first and only "Pediceutical" foot care line, it bridges the gap between a relaxing pedicure and medicinal therapy. Their unique mousse-based formulas absorb instantly into the skin without leaving a greasy residue, effectively treating dry heels and skin conditions to leave your feet baby-soft.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <h2>Spa & Relaxation</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-spa.jpg" alt="CND Spa">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>CND™ Spa</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>Elevate your manicure or pedicure into a sensory journey. The CND Spa collection uses botanical ingredients to exfoliate, smooth, and hydrate the skin. Whether it’s the brightening glow of citrus or the soothing calm of cucumber, these treatments provide a moment of pure indulgence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <h2>Nail Art & Aftercare</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-lecente.jpg" alt="Lecenté Nail Art">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>Lecenté™ Nail Art</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>Express your personality with our extensive Lecenté collection. From subtle shimmers and holographics to bold foils and chunky glitters, Lecenté offers the highest quality, cosmetic-grade nail art. It is safe, long-lasting, and the perfect way to add a bespoke sparkle to your manicure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="toggleProduct(this)">
+                    <img src="images/prod-solaroil.jpg" alt="CND SolarOil">
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3>CND™ SolarOil™</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="product-desc">
+                            <p>Often called a "miracle in a bottle," this award-winning cuticle oil is an essential part of your nail care routine. Infused with jojoba oil, sweet almond oil, and Vitamin E, it penetrates deep into the nail plate to keep natural nails and enhancements tough, flexible, and hydrated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer>
         <div class="footer-content">
-            <div class="socials"><a href="https://www.facebook.com/amylambournenaturalnailtechnician" target="_blank">Facebook</a> | <a href="https://www.instagram.com/amylambournenaturalnailtech" target="_blank">Instagram</a></div>
+            <div class="socials"><a href="#">Facebook</a> | <a href="#">Instagram</a></div>
             <p>&copy; 2025 Amy Lambourne Nail Technician</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
