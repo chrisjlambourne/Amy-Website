@@ -317,3 +317,81 @@ footer { background-color: #fff; padding: 2rem; text-align: center; border-top: 
 .product-card.active {
     border-color: var(--accent-color); /* Highlight the active card */
 }
+
+/* --- AFTERCARE SPECIFIC STYLES --- */
+.golden-rules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.rule-item {
+    padding: 1rem;
+}
+
+.rule-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.clean-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* Very soft shadow instead of border */
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.clean-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.clean-card ul {
+    list-style: none; /* remove default dots */
+}
+
+.clean-card li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Custom bullet point using the gold color */
+.clean-card li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.alert-box {
+    background-color: #fff9f9; /* Very faint red/pink */
+    border-left: 4px solid #eebbba; /* Soft pink accent */
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 4px;
+}
+
+/* Mobile fix for golden rules */
+@media (max-width: 768px) {
+    .golden-rules-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
