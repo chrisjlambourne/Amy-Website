@@ -9,6 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Style for the big transparent logo in the hero section */
+        .hero-logo {
+            max-width: 90%;      /* Ensures it fits on mobile screens */
+            width: 600px;        /* Sets a nice large size for desktop */
+            height: auto;
+            margin-bottom: 20px; /* Space between logo and button */
+            display: block;
+            margin-left: auto;   /* Centers the image */
+            margin-right: auto;
+        }
+
+        /* Style for the new Pink Button to match the logo */
+        .btn-pink {
+            background-color: #dfa6ac; /* Dusty Rose Pink to match logo */
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: background 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-pink:hover {
+            background-color: #c98e94; /* Slightly darker pink on hover */
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,10 +68,11 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Elegant Nails for the Modern You</h1>
-            <p>Qualified Beauty Therapist since 2004</p>
+            <img src="images/clearlogo.png" alt="Amy Lambourne Natural Nail Technician" class="hero-logo">
+            
             <br>
-            <a href="contact.html" class="btn-gold">Book Appointment</a>
+            
+            <a href="contact.html" class="btn-pink">Book Appointment</a>
         </div>
     </header>
 
@@ -48,7 +82,7 @@
             Hi, I'm Amy. I originally qualified as a Beauty Therapist in 2004, and since then I've found my true passion is giving people beautiful nails.
         </p>
         <p style="max-width: 800px; margin: 0 auto;">
-            Whether it's an elegant french polish for a wedding, a glam glittery look for a big night out, or an everyday beautiful pastel shade, I am here to help. I only work with industry-leading CND products to ensure your nails look healthy and beautiful.
+            Whether it's an elegant french polish for a wedding, a glam glittery look for a big night out, or an everyday beautiful pastel shade, I am here to help. I only work with industry-leading products to ensure your nails stay healthy and beautiful.
         </p>
     </section>
 
@@ -56,15 +90,15 @@
         <div class="grid-3">
             <div class="card">
                 <h3>Manicures</h3>
-                <p>Using CND Shellac or Vinylux for excellent adhesion and a tidy, long-lasting finish.</p>
+                <p>Using CND Shellac, Vinylux or Artistic for excellent adhesion and a clean, long-lasting finish.</p>
             </div>
             <div class="card">
                 <h3>Pedicures</h3>
-                <p>Relaxing foot massages, exfoliation, and essential cuticle maintenance.</p>
+                <p>Relaxing foot massages, exfoliation, and essential cuticle maintenance for beautiful, healthy feet and nails.</p>
             </div>
             <div class="card">
                 <h3>Nail Art</h3>
-                <p>Lecenté glitters, foils, and stamping to create your unique individual style.</p>
+                <p>A selection of glitters, foils, chrome, ombre, catseye and stamping to create your unique individual style.</p>
             </div>
         </div>
     </section>
