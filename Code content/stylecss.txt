@@ -89,6 +89,29 @@ img { max-width: 100%; height: auto; }
 }
 .btn-gold:hover { background-color: #bfa13d; }
 
+.btn-pink {
+    background-color: #dfa6ac; /* Dusty Rose Pink */
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: #c98e94; /* Slightly darker pink */
+    color: #ffffff;
+}
+
+
+
 /* --- SECTIONS & LAYOUT --- */
 .container { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
 .text-center { text-align: center; }
@@ -394,4 +417,38 @@ footer { background-color: #fff; padding: 2rem; text-align: center; border-top: 
 /* Mobile fix for golden rules */
 @media (max-width: 768px) {
     .golden-rules-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+/* --- SOCIAL MEDIA BUTTONS --- */
+.social-buttons {
+    display: flex;
+    gap: 15px; /* Space between the two buttons */
+    margin-top: 15px;
+}
+
+.social-btn {
+    background-color: #dfa6ac; /* Matches your Logo Pink */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded 'pill' shape looks modern */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between text and icon */
+    border: 1px solid #dfa6ac;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Switches to White with Pink Text */
+.social-btn:hover {
+    background-color: #ffffff;
+    color: #dfa6ac;
+    border-color: #dfa6ac;
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.social-btn i {
+    font-size: 1.1rem; /* Makes the icon slightly larger */
 }
