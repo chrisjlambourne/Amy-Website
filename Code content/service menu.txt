@@ -41,7 +41,7 @@
         
         <div class="price-category">
             <h2>Manicures</h2>
-            <p class="category-intro">All manicures start with essential cuticle work, cutting and shaping of the nails and application of your chosen colours. Followed by a dab of cuticle oil and hand cream of your choosing to finish.</p>
+            <p class="category-intro">All manicures start with essential cuticle work, cutting and shaping of the nails. I finish with the application of cuticle oil and hand cream of your choosing.</p>
             
             <p class="category-intro" style="margin-top: 0.5rem; font-style: italic; color: var(--accent-color);">
                 Luxury manicure upgrades include a hand and arm massage, and a mini bottle of solar oil to take home.
@@ -67,7 +67,7 @@
 
         <div class="price-category">
             <h2>CND SPA Pedicures</h2>
-            <p class="category-intro">All pedicures include a warm foot soak, cuticle work, cutting and shaping of the nails, followed by removal of hard skin and application of your chosen colours. I finish with a relaxing lower leg and foot massage and a dab of cuticle oil.</p>
+            <p class="category-intro">Includes foot soak.</p>
 
             <p class="category-intro" style="margin-top: 0.5rem; font-style: italic; color: var(--accent-color);">
                 Luxury pedicure upgrades include a lower leg and foot exfoliating scrub as part of the treatment, and a mini bottle of solar oil to take home.
@@ -119,10 +119,11 @@
             <h3>Please Note</h3>
             <p>Please give at least <strong>24 hours notice</strong> to cancel or reschedule to avoid late cancellation charges.</p>
         </div>
-        
-        <div class="text-center" style="margin-top: 2rem; margin-bottom: 2rem;">
+            <div class="text-center" style="margin-top: 2rem; margin-bottom: 2rem;">
             <p style="margin-bottom: 1rem; font-style: italic;">Want to know how to maintain your manicure?</p>
-            <a href="aftercare.html" class="btn-pink">View Aftercare Guide</a>
+            <a href="aftercare.html" style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--accent-color);">
+            View Aftercare Guide
+            </a>
         </div>
 
     </section>

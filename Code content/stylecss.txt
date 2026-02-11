@@ -89,29 +89,6 @@ img { max-width: 100%; height: auto; }
 }
 .btn-gold:hover { background-color: #bfa13d; }
 
-.btn-pink {
-    background-color: #dfa6ac; /* Dusty Rose Pink */
-    color: #ffffff;
-    padding: 12px 30px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-pink:hover {
-    background-color: #c98e94; /* Slightly darker pink */
-    color: #ffffff;
-}
-
-
-
 /* --- SECTIONS & LAYOUT --- */
 .container { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
 .text-center { text-align: center; }
