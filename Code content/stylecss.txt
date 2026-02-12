@@ -452,3 +452,51 @@ footer { background-color: #fff; padding: 2rem; text-align: center; border-top: 
 .social-btn i {
     font-size: 1.1rem; /* Makes the icon slightly larger */
 }
+/* --- CUSTOMER REVIEWS --- */
+.review-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive 3-column grid */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Very subtle luxury shadow */
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.stars {
+    color: var(--accent-color); /* Uses your Gold color */
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.client-name {
+    font-family: var(--font-heading); /* Playfair Display */
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}

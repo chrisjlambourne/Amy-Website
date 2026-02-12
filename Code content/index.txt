@@ -9,43 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Style for the big transparent logo in the hero section */
-        .hero-logo {
-            max-width: 90%;      /* Ensures it fits on mobile screens */
-            width: 600px;        /* Sets a nice large size for desktop */
-            height: auto;
-            margin-bottom: 20px; /* Space between logo and button */
-            display: block;
-            margin-left: auto;   /* Centers the image */
-            margin-right: auto;
-        }
-
-        /* Style for the new Pink Button to match the logo */
-        .btn-pink {
-            background-color: #dfa6ac; /* Dusty Rose Pink to match logo */
-            color: #ffffff;
-            padding: 12px 30px;
-            border-radius: 2px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            transition: background 0.3s;
-            font-weight: 600;
-            text-decoration: none;
-            border: none;
-        }
-
-        .btn-pink:hover {
-            background-color: #c98e94; /* Slightly darker pink on hover */
-            color: #ffffff;
-        }
-    </style>
 </head>
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <div class="logo">
             <a href="index.html"><img src="images/logo2.png" alt="Amy Lambourne Logo" class="logo-img"></a>
         </div>
@@ -68,12 +35,7 @@
 
     <header class="hero">
         <div class="hero-content">
-            <img src="images/clearlogo.png" alt="Amy Lambourne Natural Nail Technician" class="hero-logo">
-            
-            <br>
-            
-            <a href="contact.html" class="btn-pink">Book Appointment</a>
-        </div>
+            </div>
     </header>
 
     <section class="container text-center">
@@ -106,7 +68,8 @@
     <footer>
         <div class="footer-content">
             <div class="socials">
-                <a href="https://www.facebook.com/amylambournenaturalnailtechnician" target="_blank">Facebook</a> | <a href="https://www.instagram.com/amylambournenaturalnailtech" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/amylambournenaturalnailtechnician" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/amylambournenaturalnailtech" target="_blank">Instagram</a>
             </div>
             <p>Appointments by booking only</p>
             <p>&copy; 2025 Amy Lambourne Nail Technician</p>
