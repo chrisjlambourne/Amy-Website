@@ -24,11 +24,11 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html" class="active">Booking & Information</a></li>
+                <li><a href="contact.html">Booking & Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -39,7 +39,8 @@
     </header>
 
     <section class="container">
-        <div class="contact-wrapper">
+        
+        <div class="contact-wrapper" style="margin-bottom: 5rem;">
             
             <div class="contact-hours">
                 <div class="contact-item">
@@ -72,33 +73,10 @@
             </div>
 
         </div>
-    </section>
 
-    <section class="container" style="background-color: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
-        <div class="grid-2">
-            
-            <div class="about-text">
-                <h2 style="color: var(--accent-color); margin-bottom: 1.5rem;">The Salon</h2>
-                <p style="margin-bottom: 1rem; color: #555;">
-                    The salon is a welcoming space purpose-built within our home that offers a one-to-one peaceful environment designed for comfort and relaxation.
-                </p>
-                <p style="margin-bottom: 1rem; color: #555;">
-                    Free parking is provided on our private driveway and complimentary hot and cold drinks will always be available for your refreshment. I look forward to welcoming you soon.
-                </p>
-            </div>
-
-            <div class="about-img">
-                <img src="images/hero-amy.jpg" alt="Amy in the Salon" style="border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); width: 100%; height: auto; display: block;">
-            </div>
-
-        </div>
-    </section>
-
-    <section class="container">
-        <h2 class="text-center" style="margin-bottom: 2rem; color: var(--accent-color);">Booking Policy & Etiquette</h2>
+        <h2 class="text-center" style="margin-bottom: 2rem; color: var(--text-color);">Booking Policy & Etiquette</h2>
         
-        <div class="golden-rules-grid">
-            <div class="clean-card">
+        <div class="golden-rules-grid"> <div class="clean-card">
                 <i class="far fa-clock rule-icon"></i>
                 <h3>Cancellations</h3>
                 <p>I kindly request at least <strong>48 hours' notice</strong> if you need to cancel or reschedule. This allows me to offer the appointment to another client.</p>
