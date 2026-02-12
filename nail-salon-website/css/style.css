@@ -61,7 +61,7 @@ img { max-width: 100%; height: auto; }
     background-position: center top; 
     
     /* Make sure to name your photo 'hero-amy.jpg' */
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/hero-amy.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/hero-bg.jpg');
     
     background-size: cover;
     background-repeat: no-repeat;
