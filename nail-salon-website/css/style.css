@@ -53,14 +53,14 @@ img { max-width: 100%; height: auto; }
 
 /* --- HEADERS --- */
 .hero {
-    /* UPDATED: Height reduced to 65% so it's not too overwhelming */
-    height: 65vh; 
-    min-height: 500px; /* Prevents it getting too small on mobile */
+    /* UPDATED: Reduced to 50% of screen height (Letterbox style) */
+    height: 55vh; 
+    min-height: 350px; /* Reduced min-height so it doesn't look too tall on laptops */
 
-    /* UPDATED: Aligns image to the TOP so your head isn't cut off */
+    /* Aligns image to the TOP so your head isn't cut off */
     background-position: center top; 
     
-    /* Make sure to name your photo 'hero-amy.jpg' or update this line */
+    /* Make sure to name your photo 'hero-amy.jpg' */
     background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/hero-amy.jpg');
     
     background-size: cover;
@@ -78,7 +78,7 @@ img { max-width: 100%; height: auto; }
 /* Mobile Adjustment for Hero */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh; /* Shorter on phones */
+        height: 40vh; /* Even smaller on phones */
     }
 }
 
