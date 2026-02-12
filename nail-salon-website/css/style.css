@@ -126,7 +126,7 @@ img { max-width: 100%; height: auto; }
 }
 
 /* --- SECTIONS & LAYOUT --- */
-.container { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+.container { padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
 .text-center { text-align: center; }
 
 /* Highlights / Cards */
