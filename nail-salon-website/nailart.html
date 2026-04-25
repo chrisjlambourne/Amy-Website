@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Art Guide | Amy Lambourne</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ── PAGE-LEVEL OVERRIDES ─────────────────────────────── */
+        html { scroll-behavior: smooth; }
+
+        /* ── HERO ────────────────────────────────────────────── */
+        .nailart-hero {
+            background-color: var(--light-pink);
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .nailart-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 15% 80%, rgba(212,175,55,0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 85% 20%, rgba(223,166,172,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .nailart-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+        .nailart-hero p.lead {
+            max-width: 640px;
+            margin: 0 auto 2.5rem;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* ── QUICK-NAV PILLS ─────────────────────────────────── */
+        .tier-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .tier-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.4rem;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: background 0.25s, color 0.25s;
+            text-decoration: none;
+        }
+        .tier-nav a:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+        .tier-nav a .pill-badge {
+            background: var(--accent-color);
+            color: #fff;
+            border-radius: 50%;
+            width: 1.3rem;
+            height: 1.3rem;
+            font-size: 0.7rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s, color 0.25s;
+        }
+        .tier-nav a:hover .pill-badge {
+            background: #fff;
+            color: var(--accent-color);
+        }
+
+        /* ── SCROLL INDICATOR ────────────────────────────────── */
+        .scroll-hint {
+            margin-top: 1.8rem;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #bbb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .scroll-hint::before,
+        .scroll-hint::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: #ddd;
+            display: inline-block;
+        }
+
+        /* ── MAIN CONTENT WRAPPER ────────────────────────────── */
+        .nailart-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        /* ── INTRO BLOCK ─────────────────────────────────────── */
+        .intro-block {
+            padding: 3.5rem 0 2rem;
+            text-align: center;
+            border-bottom: 1px solid #ece5e5;
+            margin-bottom: 4rem;
+        }
+        .intro-block p {
+            color: #555;
+            font-size: 0.97rem;
+            line-height: 1.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ── TIER SECTION ────────────────────────────────────── */
+        .tier-section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 160px;
+        }
+
+        /* ── TIER HEADER ─────────────────────────────────────── */
+        .tier-header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: end;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ece5e5;
+        }
+        .tier-label {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+        .tier-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 400;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+        .tier-price-badge {
+            background: var(--accent-color);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2px;
+            white-space: nowrap;
+            align-self: center;
+        }
+
+        /* ── TIER BODY ───────────────────────────────────────── */
+        .tier-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .tier-description p {
+            font-size: 0.96rem;
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+        .tier-description p:last-child { margin-bottom: 0; }
+
+        .tier-includes {
+            background: #fff;
+            border: 1px solid #ece5e5;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+        .tier-includes h4 {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .tier-includes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tier-includes li {
+            font-size: 0.9rem;
+            color: #555;
+            padding: 0.4rem 0;
+            border-bottom: 1px dotted #eee;
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            line-height: 1.5;
+        }
+        .tier-includes li:last-child { border-bottom: none; }
+        .tier-includes li::before {
+            content: '–';
+            color: var(--accent-color);
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+
+        /* ── IMAGE GRID ──────────────────────────────────────── */
+        .tier-gallery-label {
+            font-size: 0.72rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #aaa;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .tier-gallery-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ece5e5;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+        .image-placeholder {
+            aspect-ratio: 1 / 1;
+            background: #faf5f5;
+            border: 1.5px dashed #ddd;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            overflow: hidden;
+            position: relative;
+        }
+        .image-placeholder:hover {
+            border-color: var(--accent-color);
+            background: #fdf9f0;
+        }
+        .image-placeholder .ph-icon {
+            width: 32px;
+            height: 32px;
+            opacity: 0.25;
+        }
+        .image-placeholder .ph-label {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #bbb;
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+        /* When an actual image is dropped/placed inside */
+        .image-placeholder img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        /* ── DIVIDER ─────────────────────────────────────────── */
+        .ornament-divider {
+            text-align: center;
+            margin: 3rem 0;
+            color: #ddd;
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+        }
+
+        /* ── IMPORTANT INFO BOX ──────────────────────────────── */
+        .info-box {
+            background: #fff;
+            border: 1px solid #ece5e5;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 2rem 2rem 2rem 1.8rem;
+            margin-bottom: 3rem;
+        }
+        .info-box h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+        }
+        .info-box p {
+            font-size: 0.93rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
+        }
+        .info-box p:last-child { margin-bottom: 0; }
+
+        /* ── CTA ─────────────────────────────────────────────── */
+        .nailart-cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--light-pink);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        .nailart-cta h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+        .nailart-cta p {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* ── STICKY TIER NAV (scrolled state) ───────────────── */
+        .sticky-tier-nav {
+            position: sticky;
+            top: 85px;
+            z-index: 50;
+            background: rgba(253,245,245,0.95);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid #ece5e5;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .sticky-tier-nav.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .sticky-tier-nav a {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .sticky-tier-nav a:hover,
+        .sticky-tier-nav a.active-tier { color: var(--accent-color); }
+
+        /* ── MOBILE ──────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .tier-body {
+                grid-template-columns: 1fr;
+            }
+            .tier-header {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .tier-price-badge {
+                align-self: flex-start;
+            }
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .sticky-tier-nav {
+                gap: 1rem;
+                padding: 0.6rem 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── NAVIGATION ───────────────────────────────────────── -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo2.png" alt="Amy Lambourne Logo" class="logo-img"></a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Booking &amp; Information</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ── STICKY MINI NAV (appears on scroll) ───────────────── -->
+    <div class="sticky-tier-nav" id="stickyNav">
+        <a href="#tier1">Tier 1 — Simple</a>
+        <a href="#tier2">Tier 2 — Medium</a>
+        <a href="#tier3">Tier 3 — Detailed</a>
+        <a href="#info">Important Info</a>
+    </div>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <div class="nailart-hero">
+        <h1>Nail Art Guide</h1>
+        <p class="lead">
+            Nail art is a beautiful way to add personality, detail and creativity to your manicure. 
+            Every design takes a different amount of time, skill and precision, so nail art is 
+            priced in tiers to keep things simple, fair and transparent.
+        </p>
+
+        <!-- Quick-jump pills -->
+        <nav class="tier-nav" aria-label="Jump to tier">
+            <a href="#tier1">
+                <span class="pill-badge">1</span>
+                Simple Art
+            </a>
+            <a href="#tier2">
+                <span class="pill-badge">2</span>
+                Medium Art
+            </a>
+            <a href="#tier3">
+                <span class="pill-badge">3</span>
+                Detailed Art
+            </a>
+        </nav>
+
+        <p class="scroll-hint">scroll to explore</p>
+    </div>
+
+    <!-- ── MAIN CONTENT ──────────────────────────────────────── -->
+    <main class="nailart-content">
+
+        <div class="intro-block">
+            <p>If you have a specific design in mind, you're always welcome to send inspiration photos before your appointment so I can advise on the most suitable tier and provide an accurate quote.</p>
+        </div>
+
+        <!-- ── TIER 1 ──────────────────────────────────────── -->
+        <section class="tier-section" id="tier1">
+            <div class="tier-header">
+                <div>
+                    <span class="tier-label">Tier One</span>
+                    <h2>Simple Art</h2>
+                </div>
+                <div class="tier-price-badge">from £5</div>
+            </div>
+
+            <div class="tier-body">
+                <div class="tier-description">
+                    <p>Tier 1 covers simpler nail art that adds a stylish finishing touch without taking too much time to create. This includes classic French tips, ombré, glitter fades, foils, and simple or minimal designs.</p>
+                    <p>It also includes smaller accent designs such as animal print or blooming gel on up to four nails.</p>
+                    <p>This tier is ideal if you want something elegant, subtle and low-maintenance, while still giving your nails a little extra detail.</p>
+                </div>
+                <div class="tier-includes">
+                    <h4>Included in this tier</h4>
+                    <ul>
+                        <li>Classic French tips (full set)</li>
+                        <li>Ombré &amp; colour fades</li>
+                        <li>Glitter fades</li>
+                        <li>Foils</li>
+                        <li>Simple &amp; minimal designs</li>
+                        <li>Animal print (up to 4 nails)</li>
+                        <li>Blooming gel (up to 4 nails)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="tier-gallery-label">Example designs</p>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="ornament-divider" aria-hidden="true">· · ·</div>
+
+        <!-- ── TIER 2 ──────────────────────────────────────── -->
+        <section class="tier-section" id="tier2">
+            <div class="tier-header">
+                <div>
+                    <span class="tier-label">Tier Two</span>
+                    <h2>Medium Art</h2>
+                </div>
+                <div class="tier-price-badge">from £8</div>
+            </div>
+
+            <div class="tier-body">
+                <div class="tier-description">
+                    <p>Tier 2 is for designs that take a bit more time, precision and creativity. This includes detailed or double-lined French, single-coloured chrome, stamping on four or more nails, nail crystals, mix-and-match sets, and full sets of animal print or blooming gel designs.</p>
+                    <p>This tier is perfect if you want your nails to stand out a little more and include more detailed design work across the set.</p>
+                </div>
+                <div class="tier-includes">
+                    <h4>Included in this tier</h4>
+                    <ul>
+                        <li>Detailed or double-lined French</li>
+                        <li>Single-colour chrome</li>
+                        <li>Multiple swirls</li>
+                        <li>Stamping on 4 or more nails</li>
+                        <li>Nail crystals</li>
+                        <li>Mix &amp; match sets</li>
+                        <li>Animal print (full set)</li>
+                        <li>Blooming gel (full set)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="tier-gallery-label">Example designs</p>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="ornament-divider" aria-hidden="true">· · ·</div>
+
+        <!-- ── TIER 3 ──────────────────────────────────────── -->
+        <section class="tier-section" id="tier3">
+            <div class="tier-header">
+                <div>
+                    <span class="tier-label">Tier Three</span>
+                    <h2>Detailed Art</h2>
+                </div>
+                <div class="tier-price-badge">from £12</div>
+            </div>
+
+            <div class="tier-body">
+                <div class="tier-description">
+                    <p>Tier 3 is for more advanced, time-consuming nail art that requires a higher level of detail and artistry. This includes hand-painted designs, detailed florals, 3D art, full intricate sets, and more elaborate chrome designs.</p>
+                    <p>Because this tier is based on complexity rather than simply the number of nails involved, the final price may vary depending on the design. More detailed or time-consuming artwork may be priced higher.</p>
+                </div>
+                <div class="tier-includes">
+                    <h4>Included in this tier</h4>
+                    <ul>
+                        <li>Hand-painted designs</li>
+                        <li>Detailed florals</li>
+                        <li>3D art</li>
+                        <li>Full intricate sets</li>
+                        <li>Elaborate chrome designs</li>
+                        <li>Bespoke &amp; custom artwork</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="tier-gallery-label">Example designs</p>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+                <div class="image-placeholder">
+                    <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    <span class="ph-label">Add image</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="ornament-divider" aria-hidden="true">· · ·</div>
+
+        <!-- ── IMPORTANT INFO ─────────────────────────────── -->
+        <section id="info" style="scroll-margin-top: 160px;">
+            <div class="info-box">
+                <h3>Important Information</h3>
+                <p>Nail art pricing is based on design complexity, skill level and the time required to complete the look, rather than just the number of nails involved. Some designs may fall between tiers or require a custom quote.</p>
+                <p>If you're unsure which tier your chosen design falls into, please send a photo in advance and I'll be happy to advise.</p>
+            </div>
+        </section>
+
+        <!-- ── CTA ────────────────────────────────────────── -->
+        <div class="nailart-cta">
+            <h3>Ready to book?</h3>
+            <p>Send your inspiration pics in advance and I'll advise on the right tier for you.</p>
+            <a href="contact.html" class="btn-gold">Book an Appointment</a>
+        </div>
+
+        <!-- Back to services link -->
+        <p style="text-align:center; margin-bottom: 2rem;">
+            <a href="services.html" style="font-size:0.85rem; color:var(--accent-color); letter-spacing:1px; text-transform:uppercase; font-weight:600;">&larr; Back to Service Menu</a>
+        </p>
+
+    </main>
+
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://www.facebook.com/amylambournenaturalnailtechnician" target="_blank">Facebook</a> | <a href="https://www.instagram.com/amylambournenaturalnailtech" target="_blank">Instagram</a>
+            </div>
+            <p>&copy; 2025 Amy Lambourne Nail Technician</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // ── Sticky mini-nav: show after hero ──────────────────
+        const hero = document.querySelector('.nailart-hero');
+        const stickyNav = document.getElementById('stickyNav');
+        const tierSections = document.querySelectorAll('.tier-section, #info');
+        const stickyLinks = document.querySelectorAll('.sticky-tier-nav a');
+
+        const heroObserver = new IntersectionObserver(([entry]) => {
+            stickyNav.classList.toggle('visible', !entry.isIntersecting);
+        }, { threshold: 0 });
+        heroObserver.observe(hero);
+
+        // ── Active tier highlighting in sticky nav ────────────
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    stickyLinks.forEach(link => {
+                        link.classList.toggle(
+                            'active-tier',
+                            link.getAttribute('href') === '#' + entry.target.id
+                        );
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        tierSections.forEach(s => sectionObserver.observe(s));
+    </script>
+</body>
+</html>
