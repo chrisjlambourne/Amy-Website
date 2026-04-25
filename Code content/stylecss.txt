@@ -126,7 +126,7 @@ img { max-width: 100%; height: auto; }
 }
 
 /* --- SECTIONS & LAYOUT --- */
-.container { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+.container { padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
 .text-center { text-align: center; }
 
 /* Highlights / Cards */
@@ -220,7 +220,7 @@ img { max-width: 100%; height: auto; }
 .social-btn i { font-size: 1.1rem; }
 
 /* --- CUSTOMER REVIEWS --- */
-.review-section { margin-top: 4rem; margin-bottom: 4rem; }
+.review-section { margin-top: 1rem; margin-bottom: 1rem; }
 .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
 
 .review-card {
